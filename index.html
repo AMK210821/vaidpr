@@ -4,44 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-        .login-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .login-container h2 {
-            margin-bottom: 20px;
-        }
-        .login-container input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .login-container button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            border: none;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .login-container button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Add Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
@@ -54,36 +17,6 @@
         <button onclick="login()">Login</button>
     </div>
 
-    <script>
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-  apiKey: "AIzaSyD1uWy8rugA17FBb7Bxg9OJ-G5r5yrj0dU",
-  authDomain: "demo2-4e95e.firebaseapp.com",
-  projectId: "demo2-4e95e",
-  storageBucket: "demo2-4e95e.firebasestorage.app",
-  messagingSenderId: "340008874383",
-  appId: "1:340008874383:web:ea1476c2a890f082c75bfa",
-  measurementId: "G-ZEKNDGV43P"
-};
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-
-        function login() {
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-
-            firebase.auth().signInWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    // Signed in
-                    var user = userCredential.user;
-                    alert("Login successful!");
-                })
-                .catch((error) => {
-                    var errorCode = error.code;
-                    var errorMessage = error.message;
-                    alert("Error: " + errorMessage);
-                });
-        }
-    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
